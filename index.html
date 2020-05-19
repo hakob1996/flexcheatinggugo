@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexIDWF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+
+</head>
+<body onload="startTime()">
+
+
+    <div id="firstPage">
+        <h2> Welcome to FlexIllusion </h2>
+        <br>
+        <h5> Please provide some information first</h5>
+    
+        <div id="questions">
+
+            <label for="fname">How Many Packages To Show?</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <button id="manybtn">Continue</button>
+        </div>
+
+    </div>
+
+
+    <div id="menu">
+            <div id="toMain2"><button>&#9776;</button></div>
+            <div id="prof-image"></div>
+            <p id="name">Gurgen Hambardzumi Gevorgyan</p>
+            
+    <div id="otherMenu">
+            <div id="current" class="otherMenu">CURRENT STOP</div>
+            
+            <div class="otherMenu">TODAY'S ITINERARY</div>
+            <br>
+            <div class="otherMenu">HOME</div>
+            <br>
+            <div class="otherMenu">OFFERS</div>
+            <br>
+            <div class="otherMenu">CALENDAR</div>
+            <br>
+            <div class="otherMenu">EARNINGS</div>
+            <br>
+            <div class="otherMenu">FEEDBACK</div>
+            <br>
+            <div class="otherMenu">SETTINGS</div>
+            <br>
+            <div class="otherMenu">HELP</div>
+            <br>
+            <div class="otherMenu">VIDEOS</div>
+    </div>           
+
+            
+    </div>
+
+    <div id="zoomedIn">
+        <div id="orangePart"><button ><i class="arrow down"></i></button></div>
+            <div id="prof-imageZoom"></div>
+            <p id="nameZoom">Gurgen Hambardzumi Gevorgyan</p>
+            <div id="onDuty">ON DUTY</div>
+            <div id="time"></div>
+
+    </div>
+
+
+    <div id="readyP">
+        <div id="toMain"><button id="dropMenu">&#9776;</button></div>
+        <div id= "grey"><h6><b>How to pick up from a store</b></h6>
+            <ul>
+                    <li>If the order isn't ready, wait outside</li>
+                    <li>If the order is ready, go inside and find your assigned packages</li>
+                    <li>Find and scan each of your assigned packages</li>
+                  </ul>
+        </div>
+    
+        <div id="grey2"></div>
+        <div id="WFM">Whole Foods Market</div>
+        <div id="shelfs" ><h5 style="text-align: center;">Go inside</h5> <br> <p id="ready" style="text-align: left;">Your Packages Are Ready To Pick Up</p> <br> <br> <p><b>Pickup instructions</b></p> SHELF-05-C <br> SHELF-04-B <br> SHELF-11-A <br> CHILLER-08-C <br> CHILLER-11-B <br> FREEZER-03-C</div>
+        
+                <div id="scan"><button><p id="many"></p></button></div>
+    
+        </div>
+    
+
+
+
+
+
+
+
+    <script>
+        var d = new Date();
+        document.getElementById("time").innerHTML = d;
+
+  function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var h1 = today.getHours() - 1;
+ 
+  m = checkTime(m);
+
+  document.getElementById('grey2').innerHTML =
+  "PICKUP " + h1 + ":" + m +  " - " + h + ":" + m ;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+        
+</body>
+</html>
