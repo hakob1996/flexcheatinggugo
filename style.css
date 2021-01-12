@@ -41,7 +41,7 @@ button {
 #name{
     color:white;
     position: absolute;
-    left:40px;
+    left:100px;
     top:170px;
     font-size: 18px;
 
@@ -152,7 +152,7 @@ button {
         color:black;
         position: absolute;
         font-family: Arial, Helvetica, sans-serif;
-        left:50px;
+        left:100px;
         top:376px;
         font-size: 18px;
     }
